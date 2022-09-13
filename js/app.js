@@ -41,7 +41,7 @@ function agregarTweet(e) { // como es un formulario se pasa el evento automatica
     // añadimos al arreglo de tweets
     tweets = [...tweets, tweetObj];
 
-    console.log(tweets);
+    // console.log(tweets);
     // agregamos al html
     insertarHtml();
 
@@ -109,9 +109,9 @@ function borrarTweet(id) {
     // aca traemos todos los resultados menos el del id, osea actualizamos el arreglo de tweets
     tweets = tweets.filter(tweet => tweet.id !== id);
 
-    // una vez obtenido el nuevo arreglo lo insertamos en el HTML actualizado, y ahi mismo se sincroniza en el local storage
+    // una vez obtenido el nuevo tweets lo cargamos en el html para actualizar
     insertarHtml();
-
+};
 // limpiamos el hmtl
 function limpiarHtml() {
     while(listaTweets.firstChild) {
